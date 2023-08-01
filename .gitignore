@@ -1,0 +1,9 @@
+node_modules
+.vagrant/
+.env
+/app/.output
+/.idea
+.nuxt
+.vs
+/app/dist/
+/.unlighthouse/
