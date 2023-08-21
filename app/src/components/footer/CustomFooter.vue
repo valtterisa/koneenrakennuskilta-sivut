@@ -1,33 +1,36 @@
 <template>
-   <footer class="bg-zinc-50 dark:bg-zinc-900 py-5">
+   <footer class="bg-custom-primary dark:bg-custom-primary py-5">
       <div class="p-4 sm:p-6 content">
          <!-- Logo -->
          <div class="mx-2 sm:mx-0 flex flex-col sm:flex-row items-stretch justify-between">
             <!-- Serveri ry-->
             <div class="sm:w-1/3">
-               <h2 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">Serveri ry</h2>
-               <h2 class="mb-6 text-md font-semibold text-gray-900 dark:text-white">Y: 1085522-1</h2>
-               <p class="mb-1 text-md font-mediumfont-bold text-gray-9font-bold00 dark:text-white">Microkatu 1 E 24</p>
-               <p class="mb-1 text-md font-mediumfont-bold text-gray-900 dark:text-white">PL 1627</p>
-               <p class="mb-1 text-md font-mediumfont-bold text-gray-900 dark:text-white">70211 Kuopio</p>
+               <h2 class="mb-2 text-xl font-bold">Koneenrakennuskilta ry</h2>
+               <h2 class="mb-6 text-md font-semibold">Y: 0717252-6</h2>
+
+               <p class="mb-1 text-md font-mediumfont-bold">Laserkatu 10</p>
+               <p class="mb-1 text-md font-mediumfont-bold">53850 Lappeenranta</p>
+               <br />
+               <p class="mb-1 text-md font-mediumfont-bold">Pankki: FI93 8146 9710 2387 25 /</p>
+               <p class="mb-1 text-md font-mediumfont-bold">DABAFIHH</p>
                <br />
                <a
-                  class="text-md font-mediumfont-bold text-gray-900 dark:text-white hover:underline"
-                  href="mailto:hallitus@serveriry.fi"
+                  class="text-md font-medium font-bold hover:underline"
+                  href="mailto:pj@koneenrakennuskilta.fi"
                   target="_blank"
-                  >hallitus@serveriry.fi</a
+                  >pj(ät)koneenrakennuskilta.fi</a
                >
             </div>
             <!-- Logo -->
-            <div class="hidden sm:block sm:w-1/3">
+            <!-- <div class="hidden sm:block sm:w-1/3">
                <a href="https://serveriry.fi/" class="flex items-center justify-center">
                   <ServerLogoRound class="h-48" />
                </a>
-            </div>
+            </div> -->
             <!-- Links -->
             <div class="sm:w-1/3">
                <div class="text-left sm:text-right">
-                  <ul class="mb-6 text-md font-medium text-gray-900 dark:text-white mt-10 sm:mt-0">
+                  <ul class="mb-6 text-md font-medium mt-10 sm:mt-0">
                      <li v-for="link in links" :key="link.text" class="mb-2">
                         <nuxt-link
                            v-if="link.href[0] === '/'"
@@ -56,9 +59,9 @@
                </a>
             </div>
             <!-- Copyright -->
-            <div class="text-sm text-gray-600 text-center dark:text-gray-400 sm:w-1/3 mt-4 sm:mt-0">
+            <div class="text-sm text-center sm:w-1/3 mt-4 sm:mt-0">
                © {{ date }}
-               <a href="https://serveriry.fi/" class="hover:underline">Serveri ry</a>
+               <a href="https://serveriry.fi/" class="hover:underline">Koneenrakennuskilta ry</a>
             </div>
             <!-- Social Media-->
             <div class="flex m-6 space-x-6 justify-center sm:justify-end sm:m-0 sm:w-1/3">
@@ -103,16 +106,6 @@
          name: 'Linkedin',
          link: 'https://www.linkedin.com/company/serveriry',
          icon: 'fab fa-linkedin',
-      },
-      {
-         name: 'Steam',
-         link: 'https://steamcommunity.com/groups/serveriry',
-         icon: 'fab fa-steam',
-      },
-      {
-         name: 'Matrix',
-         link: 'https://matrix.to/#/!snbPIxozkoFgdhSyzz:matrix.org?via=matrix.org&via=t2bot.io',
-         icon: 'fa fa-m',
       },
    ];
 </script>

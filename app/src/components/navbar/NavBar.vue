@@ -1,5 +1,5 @@
 <template>
-   <Disclosure v-slot="{ open }" as="nav" class="bg-zinc-50 dark:bg-zinc-900 fixed w-full z-10">
+   <Disclosure v-slot="{ open }" as="nav" class="bg-custom-primary dark:bg-custom-primary fixed w-full z-10">
       <div class="px-6 lg:px-16 xl:px-32">
          <div class="relative flex items-center justify-between">
             <!-- Mobile menu button-->
@@ -19,14 +19,12 @@
                <div class="flex flex-1 md:flex-auto items-center justify-center">
                   <!-- Desktop -->
                   <div class="hidden h-20 my-1 w-auto md:block">
-                     <nuxt-link :to="localePath('/')">
-                        <ServerLogo />
-                     </nuxt-link>
+                     <nuxt-link :to="localePath('/')"> <KRKLogo /> </nuxt-link>
                   </div>
                   <!-- Mobile -->
                   <div class="block h-20 my-1 w-auto md:hidden">
                      <nuxt-link :to="localePath('/')">
-                        <ServerLogo />
+                        <KRKLogo />
                      </nuxt-link>
                   </div>
                </div>
@@ -48,8 +46,8 @@
                               <button
                                  :class="[
                                     $route.path === localePath(item.href)
-                                       ? 'text-custom-primary'
-                                       : 'text-gray-700 dark:text-gray-300',
+                                       ? 'text-black dark:text-black'
+                                       : 'text-black dark:text-black',
                                     'nav-link',
                                  ]"
                                  :aria-current="item.current ? 'page' : undefined"
@@ -109,7 +107,7 @@
 <script setup>
    import { Disclosure, DisclosureButton } from '@headlessui/vue';
    import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline';
-   import ServerLogo from '@/components/navbar/ServerLogo.vue';
+   import KRKLogo from './KRKLogo.vue';
    import LangSwitcher from '@/components/navbar/LangSwitcher.vue';
 
    const navigation = [

@@ -16,7 +16,6 @@
    const props = defineProps({
       error: Object,
    });
-
    // clear error and redirect to home page
    const handleError = () => clearError({ redirect: '/' });
 </script>

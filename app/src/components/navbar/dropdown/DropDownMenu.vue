@@ -7,7 +7,7 @@
             :class="[
                $route.path.split('/').slice(-2)[0] === localePath(menu.href).split('/').slice(-1)[0]
                   ? 'text-custom-primary dark:text-custom-secondary-dark'
-                  : 'text-gray-700 dark:text-gray-300',
+                  : 'text-black dark:text-black',
                'nav-link',
             ]"
             :aria-current="menu.current ? 'page' : undefined"

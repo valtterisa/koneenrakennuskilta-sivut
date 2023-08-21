@@ -1,6 +1,7 @@
-import { defineNuxtConfig } from 'nuxt';
-export default {
-   ssr: true,
+import { defineNuxtConfig } from "nuxt/config";
+
+export default defineNuxtConfig({
+   // ssr: true,
    srcDir: 'src/',
    css: ['~/assets/css/main.css'],
    postcss: {
@@ -10,7 +11,12 @@ export default {
       },
    },
    plugins: [{ src: '~/plugins/fontawesome.ts' }],
-   modules: ['@nuxtjs/i18n', 'nuxt-delay-hydration'],
+   modules: ['@nuxtjs/i18n', 'nuxt-delay-hydration', "@nuxtjs/sanity"],
+   sanity: {
+      projectId: "20m2sobp",
+      apiVersion: '2021-03-25', 
+      dataset: "production",
+   },
    i18n: {
       fallbackLocale: { default: ['fi', 'en'] },
       detectBrowserLanguage: {
@@ -37,7 +43,7 @@ export default {
    runtimeConfig: {
       // Config within public will be also exposed to the client
       public: {
-         API_URL: process.env.NUXT_API_URL || 'http://localhost:8001',
+         API_URL: process.env.NUXT_API_URL || 'http://localhost:3333',
       },
    },
-};
+});
